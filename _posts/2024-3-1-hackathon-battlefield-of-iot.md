@@ -12,4 +12,5 @@ Had an incredible time participating in the Battlefield of Things IoT hashtag#ha
 Our team rose to the challenge by engineering an encrypted mesh network of sensor nodes utilizing hashtag#LoRa radio modules for long range transmission over multiple kilometers, facilitated by ESP32 microcontrollers. Each node was armed with a GPS module and a suite of sensors, empowering us to detect and localize human presence at a very low cost. 📡🗺 
 
 ![hackathon](/assets/img/projects/hackathon/hackathon1.jpg){:.ioda}
+
 ![hackathon](/assets/img/projects/hackathon/hackathon2.jpg){:.ioda}
