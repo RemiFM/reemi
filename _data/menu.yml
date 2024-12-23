@@ -1,0 +1,22 @@
+# For documentation on this file, see:
+# https://github.com/riggraz/no-style-please#customize-the-menu
+
+entries:
+  - title: about me
+    entries:
+      - title: electrical engineer from Leuven, BE
+      - title: "interests: power electronics, energy storage & embedded"
+      - title: "more info: <a href='https://linkedin.com/in/remidecoster'>LinkedIn</a> & <a href='https://github.com/RemiFM'>GitHub</a> pages"
+     
+  - title: projects
+    post_list:
+      limit: 5
+      show_more: true
+      show_more_text: see more...
+      show_more_url: archive.html
+
+  - title: pcb gallery
+    entries:
+      - title: collection of printed circuit boards
+        url: pcb
+  
