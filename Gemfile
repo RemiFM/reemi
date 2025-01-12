@@ -3,6 +3,7 @@
 source "https://rubygems.org"
 
 gem "kramdown-parser-gfm"
+gem 'jekyll-include-cache'
 
 gem "webrick"
 
