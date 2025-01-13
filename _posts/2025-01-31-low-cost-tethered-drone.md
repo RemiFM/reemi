@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Low-Cost Tethered Drone Solutions"
+title: "Low-Cost Tethered Drone"
 categories: project
 tags: [drones, power]
 ---
