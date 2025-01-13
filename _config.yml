@@ -7,6 +7,7 @@ description: > # description of the site (multiple lines allowed)
   Electrical Engineer
 
 permalink: /:slug.html
+future: true
 
 favicon: "logo.png" # name+extension of favicon (which must be put on the root folder)
 goat_counter: "remi" # put your GoatCounter name if you want to use GoatCounter analytics
@@ -31,3 +32,4 @@ plugins:
 
 include:
   - _themes
+  

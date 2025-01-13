@@ -1,6 +1,6 @@
 ---
 layout: post
-category: test
+category: project
 ---
 
 By combining energy storage technologies with complementary features, we achieved a significantly extended driving range without sacrificing acceleration performance in a small electric vehicle.
