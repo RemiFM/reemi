@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-02-24T00:28:06+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Remi De Coster</title><subtitle>Electrical Engineer
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-02-24T00:35:03+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Remi De Coster</title><subtitle>Electrical Engineer
 </subtitle><author><name>Remi De Coster</name></author><entry><title type="html">Radio Controlled Development Vehicle</title><link href="http://localhost:4000/radio-controlled-development-vehicle.html" rel="alternate" type="text/html" title="Radio Controlled Development Vehicle" /><published>2025-02-21T00:00:00+01:00</published><updated>2025-02-21T00:00:00+01:00</updated><id>http://localhost:4000/radio-controlled-development-vehicle</id><content type="html" xml:base="http://localhost:4000/radio-controlled-development-vehicle.html">&lt;p&gt;A radio-controlled vehicle with a flat top has been designed for use in robotics projects. The initial application involves &lt;strong&gt;autonomously landing a drone on the RC vehicle while it is in motion&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;The vehicle is powered by valve-regulated lead-acid (VRLA) gel batteries, chosen for their durability given that the vehicle will not undergo frequent charge/discharge cycles. It is equipped with an onboard charging module, allowing the vehicle to be conveniently charged by plugging it into a standard wall socket. A NUC PC and a 5G router are integrated, enabling a wide range of programmable tasks on the RC vehicle.&lt;/p&gt;
@@ -19,26 +19,15 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;In a recent project, I explored &lt;strong&gt;low-cost solutions&lt;/strong&gt; for tethered drones by looking into different electrical architectures. The goal was to determine the feasibility of drone systems that provide reliable power and communication while maintaining affordability and scalability for diverse use cases. In particular we compared both &lt;strong&gt;AC tether&lt;/strong&gt; systems and &lt;strong&gt;high voltage DC tether&lt;/strong&gt; systems, in both centralized and distributed power topologies. Communication signals were transmitted over the same lines used to deliver power, utilizing &lt;strong&gt;signal superposition&lt;/strong&gt; to combine both functionalities within a single tether.
-«««&amp;lt; Updated upstream
-=======&lt;/p&gt;
+&lt;p&gt;In a recent project, I explored &lt;strong&gt;low-cost solutions&lt;/strong&gt; for tethered drones by looking into different electrical architectures. The goal was to determine the feasibility of drone systems that provide reliable power and communication while maintaining affordability and scalability for diverse use cases. In particular we compared both &lt;strong&gt;AC tether&lt;/strong&gt; systems and &lt;strong&gt;high voltage DC tether&lt;/strong&gt; systems, in both centralized and distributed power topologies. Communication signals were transmitted over the same lines used to deliver power, utilizing &lt;strong&gt;signal superposition&lt;/strong&gt; to combine both functionalities within a single tether.&lt;/p&gt;
 
-&lt;p&gt;| &lt;img src=&quot;/assets/img/pcb/pcb-acdc-700W.png&quot; alt=&quot;kart&quot; class=&quot;ioda&quot; /&gt; |&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;blockquote&gt;
-    &lt;blockquote&gt;
-      &lt;blockquote&gt;
-        &lt;blockquote&gt;
-          &lt;blockquote&gt;
-            &lt;blockquote&gt;
-              &lt;p&gt;Stashed changes&lt;/p&gt;
-            &lt;/blockquote&gt;
-          &lt;/blockquote&gt;
-        &lt;/blockquote&gt;
-      &lt;/blockquote&gt;
-    &lt;/blockquote&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;</content><author><name>Remi De Coster</name></author><category term="project" /><category term="drones" /><category term="power" /><summary type="html">Tethered drones are a good solution for applications requiring long-duration flight, consistent power delivery, and secure communication. Unlike traditional drones that rely on onboard batteries, tethered drones are connected to a ground station via a physical tether, enabling continuous operation while maintaining a secure and interference-resistant data link. These systems are increasingly popular in security and surveillance applications, offering real-time aerial monitoring without the risk of signal interception or limited flight time.</summary></entry><entry><title type="html">Diagnostic Tool For Farming Vehicles</title><link href="http://localhost:4000/diagnostic-tool-for-farming-vehicles.html" rel="alternate" type="text/html" title="Diagnostic Tool For Farming Vehicles" /><published>2024-11-04T00:00:00+01:00</published><updated>2024-11-04T00:00:00+01:00</updated><id>http://localhost:4000/diagnostic-tool-for-farming-vehicles</id><content type="html" xml:base="http://localhost:4000/diagnostic-tool-for-farming-vehicles.html">&lt;p&gt;Agricultural vehicles often face wire harness issues due to the harsh environments in which they operate. Factors such as water ingress, punctures, ruptures, or structural damage to cables can significantly impact their performance. During the design phase, vehicle engineers struggle to &lt;strong&gt;identify potential failure points or weak spots in the wire harness&lt;/strong&gt;. For maintenance technicians, locating broken wire segments or loose connections is a time-consuming task, often necessitating the replacement of the entire harness.&lt;/p&gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/pcb/pcb-acdc-700W.png&quot; alt=&quot;kart&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Remi De Coster</name></author><category term="project" /><category term="drones" /><category term="power" /><summary type="html">Tethered drones are a good solution for applications requiring long-duration flight, consistent power delivery, and secure communication. Unlike traditional drones that rely on onboard batteries, tethered drones are connected to a ground station via a physical tether, enabling continuous operation while maintaining a secure and interference-resistant data link. These systems are increasingly popular in security and surveillance applications, offering real-time aerial monitoring without the risk of signal interception or limited flight time.</summary></entry><entry><title type="html">Diagnostic Tool For Farming Vehicles</title><link href="http://localhost:4000/diagnostic-tool-for-farming-vehicles.html" rel="alternate" type="text/html" title="Diagnostic Tool For Farming Vehicles" /><published>2024-11-04T00:00:00+01:00</published><updated>2024-11-04T00:00:00+01:00</updated><id>http://localhost:4000/diagnostic-tool-for-farming-vehicles</id><content type="html" xml:base="http://localhost:4000/diagnostic-tool-for-farming-vehicles.html">&lt;p&gt;Agricultural vehicles often face wire harness issues due to the harsh environments in which they operate. Factors such as water ingress, punctures, ruptures, or structural damage to cables can significantly impact their performance. During the design phase, vehicle engineers struggle to &lt;strong&gt;identify potential failure points or weak spots in the wire harness&lt;/strong&gt;. For maintenance technicians, locating broken wire segments or loose connections is a time-consuming task, often necessitating the replacement of the entire harness.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
