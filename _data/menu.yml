@@ -5,8 +5,14 @@ entries:
   - title: about me
     entries:
       - title: electrical engineer from Leuven, BE
-      - title: "interests: power electronics, energy storage & embedded"
-      - title: "more info: <a href='https://linkedin.com/in/remidecoster'>LinkedIn</a> & <a href='https://github.com/RemiFM'>GitHub</a>"
+      - title: "interests:"
+        entries:
+          - title: electronics hardware design
+          - title: power electronics
+          - title: energy storage systems
+          - title: embedded systems
+      #- title: "interests: power electronics, energy storage & embedded"
+      - title: "more: <a href='https://linkedin.com/in/remidecoster'>LinkedIn</a> & <a href='https://github.com/RemiFM'>GitHub</a>"
      
   - title: projects
     post_list:
@@ -19,4 +25,10 @@ entries:
     entries:
       - title: collection of printed circuit boards
         url: pcb
+
+  - title: certifications
+    entries:
+      - title: collection of education & courses
+        url: education
+
   
