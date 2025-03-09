@@ -26,9 +26,9 @@ entries:
       - title: collection of printed circuit boards
         url: pcb
 
-  - title: certifications
-    entries:
-      - title: collection of education & courses
-        url: education
+ # - title: certifications
+ #   entries:
+ #     - title: collection of education & courses
+ #       url: education
 
   
