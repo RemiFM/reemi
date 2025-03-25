@@ -3,7 +3,7 @@ layout: page
 title: PCB Gallery
 ---
 
-| ![pcb](/assets/img/pcb/rf2usb.png){:.ioda} | ![pcb](/assets/img/pcb/pcb-ucm-addon.jpg){:.ioda} |
+| ![pcb](/assets/img/pcb/pcb-rf2usb.png){:.ioda} | ![pcb](/assets/img/pcb/pcb-ucm-addon.jpg){:.ioda} |
 | :------------------------------------------------: | :------------------------------------------------: |
 | ![pcb](/assets/img/pcb/pcb-llc-half-bridge.jpg){:.ioda} | ![pcb](/assets/img/pcb/pcb-controllable-adapter.gif){:.ioda} |
 | ![pcb](/assets/img/pcb/pcb-acdc-700W.png){:.ioda} | ![pcb](/assets/img/pcb/pcb-breakout-board.jpg){:.ioda} |
