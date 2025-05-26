@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ESC for Motor Control Evaluation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="ESC for Motor Control Evaluation" />
+<meta name="author" content="Remi De Coster" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This page will be used to track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various motor control algorithms like 6-step control and sensorless FOC (field-oriented control). I defined the following requirements:" />
+<meta property="og:description" content="This page will be used to track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various motor control algorithms like 6-step control and sensorless FOC (field-oriented control). I defined the following requirements:" />
+<link rel="canonical" href="http://localhost:4000/esc-motor-controller.html" />
+<meta property="og:url" content="http://localhost:4000/esc-motor-controller.html" />
+<meta property="og:site_name" content="Remi De Coster" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-12T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ESC for Motor Control Evaluation" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/esc-motor-controller.html","author":{"@type":"Person","name":"Remi De Coster"},"@type":"BlogPosting","dateModified":"2025-05-12T00:00:00+02:00","datePublished":"2025-05-12T00:00:00+02:00","description":"This page will be used to track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various motor control algorithms like 6-step control and sensorless FOC (field-oriented control). I defined the following requirements:","headline":"ESC for Motor Control Evaluation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/esc-motor-controller.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Remi De Coster" /><link rel="shortcut icon" type="image/x-icon" href="/logo.png" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head><body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-12 00:00:00 +0200">2025-05-12</time>
+  </p>
+  
+  <h1>ESC for Motor Control Evaluation</h1>
+
+  <p>This page will be used to track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various motor control algorithms like 6-step control and <strong>sensorless FOC</strong> (field-oriented control). I defined the following requirements:</p>
+
+<ul>
+  <li>3-5S LiPo input (11.1-21V)</li>
+  <li>45A continuous current</li>
+  <li>Current &amp; voltage sensing on all phases</li>
+  <li>CAN, UART, SWD &amp; I2C interfaces</li>
+  <li>6-layer board, 2oz on outer layers, 0.5oz on inner layers</li>
+  <li>Small form factor, suitable for UAV applications</li>
+</ul>
+
+<p>Some interesting resources I will consult during the design are the open source VESC project and the STMicroelectronics B-G431B-ESC1 discovery kit. Both have detailed schematics and documentation available.</p>
+
+<p>The schematic is based around the STM32G4 microcontroller, mixed-signal MCU’s with DSP and FPU instructions aimed at motor control and digital power applications. Three single half-bridge drivers are used instead of a single three-phase driver to benefit the layout of the board. The STL225N6F7AG 60V, 120A MOSFET with an on-resistance of 1.2mOhm is used.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/assets/img/projects/esc-motor/power_schematic.png" alt="pcb" class="ioda" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Currently, I am in progress with the layout of the board. Only the power stage is shown in the schematic above.</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>

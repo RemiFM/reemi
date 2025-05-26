@@ -1,5 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-26T22:36:32+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Remi De Coster</title><subtitle>Electrical Engineer
-</subtitle><author><name>Remi De Coster</name></author><entry><title type="html">STM32 based RF-to-USB dongle</title><link href="http://localhost:4000/stm32-based-rf-to-usb-dongle.html" rel="alternate" type="text/html" title="STM32 based RF-to-USB dongle" /><published>2025-04-04T00:00:00+02:00</published><updated>2025-04-04T00:00:00+02:00</updated><id>http://localhost:4000/STM32-based-RF-to-USB-dongle</id><content type="html" xml:base="http://localhost:4000/stm32-based-rf-to-usb-dongle.html">&lt;p&gt;STM32L4-based RF-to-USB dongle using the wireless &lt;strong&gt;NRF24&lt;/strong&gt; 2.4 GHz transceiver. The board includes a USB-A connector on one side and a female SMA antenna connector on the other. It is a 4-layer PCB created using KiCad measuring &lt;strong&gt;50 mm x 20 mm&lt;/strong&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-26T23:24:10+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Remi De Coster</title><subtitle>Electrical Engineer
+</subtitle><author><name>Remi De Coster</name></author><entry><title type="html">ESC for Motor Control Evaluation</title><link href="http://localhost:4000/esc-motor-controller.html" rel="alternate" type="text/html" title="ESC for Motor Control Evaluation" /><published>2025-05-12T00:00:00+02:00</published><updated>2025-05-12T00:00:00+02:00</updated><id>http://localhost:4000/esc-motor-controller</id><content type="html" xml:base="http://localhost:4000/esc-motor-controller.html">&lt;p&gt;This page will be used to track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various motor control algorithms like 6-step control and &lt;strong&gt;sensorless FOC&lt;/strong&gt; (field-oriented control). I defined the following requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;3-5S LiPo input (11.1-21V)&lt;/li&gt;
+  &lt;li&gt;45A continuous current&lt;/li&gt;
+  &lt;li&gt;Current &amp;amp; voltage sensing on all phases&lt;/li&gt;
+  &lt;li&gt;CAN, UART, SWD &amp;amp; I2C interfaces&lt;/li&gt;
+  &lt;li&gt;6-layer board, 2oz on outer layers, 0.5oz on inner layers&lt;/li&gt;
+  &lt;li&gt;Small form factor, suitable for UAV applications&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some interesting resources I will consult during the design are the open source VESC project and the STMicroelectronics B-G431B-ESC1 discovery kit. Both have detailed schematics and documentation available.&lt;/p&gt;
+
+&lt;p&gt;The schematic is based around the STM32G4 microcontroller, mixed-signal MCU’s with DSP and FPU instructions aimed at motor control and digital power applications. Three single half-bridge drivers are used instead of a single three-phase driver to benefit the layout of the board. The STL225N6F7AG 60V, 120A MOSFET with an on-resistance of 1.2mOhm is used.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/esc-motor/power_schematic.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Currently, I am in progress with the layout of the board. Only the power stage is shown in the schematic above.&lt;/p&gt;</content><author><name>Remi De Coster</name></author><category term="project" /><category term="STM32" /><category term="ESC" /><category term="PCB" /><summary type="html">This page will be used to track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various motor control algorithms like 6-step control and sensorless FOC (field-oriented control). I defined the following requirements:</summary></entry><entry><title type="html">STM32 based RF-to-USB dongle</title><link href="http://localhost:4000/stm32-based-rf-to-usb-dongle.html" rel="alternate" type="text/html" title="STM32 based RF-to-USB dongle" /><published>2025-04-04T00:00:00+02:00</published><updated>2025-04-04T00:00:00+02:00</updated><id>http://localhost:4000/STM32-based-RF-to-USB-dongle</id><content type="html" xml:base="http://localhost:4000/stm32-based-rf-to-usb-dongle.html">&lt;p&gt;STM32L4-based RF-to-USB dongle using the wireless &lt;strong&gt;NRF24&lt;/strong&gt; 2.4 GHz transceiver. The board includes a USB-A connector on one side and a female SMA antenna connector on the other. It is a 4-layer PCB created using KiCad measuring &lt;strong&gt;50 mm x 20 mm&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
