@@ -9,8 +9,8 @@
 <meta property="og:title" content="Resonant Switching Dcdc Converter" />
 <meta name="author" content="Remi De Coster" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="My master thesis covered the topic of the design and validation of a resonant switching LLC DC/DC converter for the auxilariy systems of a solar car. These low-power (&lt;25W) auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a wide range (difference of 80V) of input voltages due to the battery system connected to the input." />
-<meta property="og:description" content="My master thesis covered the topic of the design and validation of a resonant switching LLC DC/DC converter for the auxilariy systems of a solar car. These low-power (&lt;25W) auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a wide range (difference of 80V) of input voltages due to the battery system connected to the input." />
+<meta name="description" content="My master thesis covered the topic of the design and validation of a resonant switching LLC DC/DC converter for the auxilariy systems of a solar car. These low-power (&lt;25W) auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a wide range (~90V - 170V) of input voltages due to the battery system connected to the input." />
+<meta property="og:description" content="My master thesis covered the topic of the design and validation of a resonant switching LLC DC/DC converter for the auxilariy systems of a solar car. These low-power (&lt;25W) auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a wide range (~90V - 170V) of input voltages due to the battery system connected to the input." />
 <link rel="canonical" href="http://localhost:4000/resonant-switching-dcdc-converter.html" />
 <meta property="og:url" content="http://localhost:4000/resonant-switching-dcdc-converter.html" />
 <meta property="og:site_name" content="Remi De Coster" />
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Resonant Switching Dcdc Converter" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Remi De Coster"},"url":"http://localhost:4000/resonant-switching-dcdc-converter.html","@type":"BlogPosting","headline":"Resonant Switching Dcdc Converter","dateModified":"2022-06-01T00:00:00+02:00","datePublished":"2022-06-01T00:00:00+02:00","description":"My master thesis covered the topic of the design and validation of a resonant switching LLC DC/DC converter for the auxilariy systems of a solar car. These low-power (&lt;25W) auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a wide range (difference of 80V) of input voltages due to the battery system connected to the input.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/resonant-switching-dcdc-converter.html"},"@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/resonant-switching-dcdc-converter.html","author":{"@type":"Person","name":"Remi De Coster"},"@type":"BlogPosting","dateModified":"2022-06-01T00:00:00+02:00","datePublished":"2022-06-01T00:00:00+02:00","description":"My master thesis covered the topic of the design and validation of a resonant switching LLC DC/DC converter for the auxilariy systems of a solar car. These low-power (&lt;25W) auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a wide range (~90V - 170V) of input voltages due to the battery system connected to the input.","headline":"Resonant Switching Dcdc Converter","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/resonant-switching-dcdc-converter.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Remi De Coster" /><link rel="shortcut icon" type="image/x-icon" href="/logo.png" />
   <link rel="stylesheet" href="/assets/css/main.css" />
@@ -33,22 +33,34 @@
   
   <h1>Resonant Switching Dcdc Converter</h1>
 
-  <p>My master thesis covered the topic of the design and validation of a resonant switching LLC DC/DC converter for the auxilariy systems of a solar car. These low-power (&lt;25W) auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a wide range (difference of 80V) of input voltages due to the battery system connected to the input.</p>
+  <p>My master thesis covered the topic of the design and validation of a <strong>resonant switching LLC DC/DC</strong> converter for the auxilariy systems of a solar car. These <strong>low-power (&lt;25W)</strong> auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a <strong>wide range (~90V - 170V)</strong> of input voltages due to the battery system connected to the input.</p>
 
 <table>
   <tbody>
     <tr>
-      <td><img src="/assets/img/pcb/pcb-llc-half-bridge.jpg" alt="pcb" class="ioda" /></td>
+      <td><img src="/assets/img/pcb/pcb-llc-half-bridge.png" alt="pcb" class="ioda" /></td>
     </tr>
   </tbody>
 </table>
 
-<p>Both half-bridge and full-bridge rectification variants were created. The ICE2HS01G IC by Infineon was used. The final esults were underwhelming, the LLC converter was not deemed suitable for a low power application due to its complexity and large BOM.</p>
+<p>Designing the resonant tank (LLC) of the converter is a crucial but difficult process. Using the first harmonic approximation method, a transfer function can be constructed which prescribes the behaviour of the converter at different switching frequencies. Another difficulty was the realisation of our own magnetic components. Multiple transformer configurations were constructed and compared.</p>
 
 <table>
   <tbody>
     <tr>
-      <td><img src="/assets/img/pcb/pcb-llc-full-bridge.jpg" alt="pcb" class="ioda" /></td>
+      <td><img src="/assets/img/projects/thesis_llc/transferfunctie_finaal.png" alt="llc" /></td>
+      <td><img src="/assets/img/projects/thesis_llc/wikkelmethoden_foto.jpg" alt="llc" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Both half-bridge and full-bridge rectification variants were created using <strong>Altium Designer</strong>. The ICE2HS01G IC by Infineon was used. The final esults were underwhelming, the LLC converter was not deemed suitable for a low power application due to its complexity and large BOM.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/assets/img/projects/thesis_llc/pcb_bovenzijde-1.png" alt="llc" /></td>
+      <td><img src="/assets/img/projects/thesis_llc/pcb_onderzijde-1.png" alt="llc" /></td>
     </tr>
   </tbody>
 </table>

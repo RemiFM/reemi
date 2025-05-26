@@ -1,16 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-03-07T00:18:57+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Remi De Coster</title><subtitle>Electrical Engineer
-</subtitle><author><name>Remi De Coster</name></author><entry><title type="html">Radio Controlled Development Vehicle</title><link href="http://localhost:4000/radio-controlled-development-vehicle.html" rel="alternate" type="text/html" title="Radio Controlled Development Vehicle" /><published>2025-02-21T00:00:00+01:00</published><updated>2025-02-21T00:00:00+01:00</updated><id>http://localhost:4000/radio-controlled-development-vehicle</id><content type="html" xml:base="http://localhost:4000/radio-controlled-development-vehicle.html">&lt;p&gt;A radio-controlled vehicle with a flat top has been designed for use in robotics projects. The initial application involves autonomously landing a drone on the RC vehicle while it is in motion.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-26T22:36:32+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Remi De Coster</title><subtitle>Electrical Engineer
+</subtitle><author><name>Remi De Coster</name></author><entry><title type="html">STM32 based RF-to-USB dongle</title><link href="http://localhost:4000/stm32-based-rf-to-usb-dongle.html" rel="alternate" type="text/html" title="STM32 based RF-to-USB dongle" /><published>2025-04-04T00:00:00+02:00</published><updated>2025-04-04T00:00:00+02:00</updated><id>http://localhost:4000/STM32-based-RF-to-USB-dongle</id><content type="html" xml:base="http://localhost:4000/stm32-based-rf-to-usb-dongle.html">&lt;p&gt;STM32L4-based RF-to-USB dongle using the wireless &lt;strong&gt;NRF24&lt;/strong&gt; 2.4 GHz transceiver. The board includes a USB-A connector on one side and a female SMA antenna connector on the other. It is a 4-layer PCB created using KiCad measuring &lt;strong&gt;50 mm x 20 mm&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/rc-vehicle/rc-development-vehicle-2.jpg&quot; alt=&quot;kart&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/rc-vehicle/rc-development-vehicle-3.jpg&quot; alt=&quot;kart&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/pcb/pcb-rf2usb.png&quot; alt=&quot;RF2USB&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;The vehicle is powered by VRLA gel batteries, chosen for their durability given that the vehicle will not undergo frequent charge/discharge cycles. It is equipped with an onboard charging module, allowing the vehicle to be conveniently charged by plugging it into a standard wall socket. A NUC PC and a 5G router are integrated, enabling a wide range of programmable tasks on the RC vehicle.&lt;/p&gt;</content><author><name>Remi De Coster</name></author><category term="project" /><category term="autonomous" /><category term="robotics" /><category term="power" /><summary type="html">A radio-controlled vehicle with a flat top has been designed for use in robotics projects. The initial application involves autonomously landing a drone on the RC vehicle while it is in motion.</summary></entry><entry><title type="html">Low-Cost Tethered Drone</title><link href="http://localhost:4000/low-cost-tethered-drone.html" rel="alternate" type="text/html" title="Low-Cost Tethered Drone" /><published>2025-01-31T00:00:00+01:00</published><updated>2025-01-31T00:00:00+01:00</updated><id>http://localhost:4000/low-cost-tethered-drone</id><content type="html" xml:base="http://localhost:4000/low-cost-tethered-drone.html">&lt;p&gt;Tethered drones are a good solution for applications requiring long-duration flight, consistent power delivery, and secure communication. Unlike traditional drones that rely on onboard batteries, tethered drones are connected to a ground station via a physical tether, enabling &lt;strong&gt;continuous operation while maintaining a secure and interference-resistant data link&lt;/strong&gt;. These systems are increasingly popular in security and surveillance applications, offering real-time aerial monitoring without the risk of signal interception or limited flight time.&lt;/p&gt;
+&lt;p&gt;The boards were ordered from JLCPCB, and the assembly was done &lt;strong&gt;manually&lt;/strong&gt; using a hot plate and a rework station. I used STM32CubeIDE and the HAL provided by the manufacturer for writing the firmware. For the OLED display, I found a &lt;a href=&quot;https://github.com/afiskon/stm32-ssd1306&quot;&gt;library&lt;/a&gt; which works with OLEDs based on SSD1306 driver. The nRF24 driver required more work, and is being constructed step by step. A state machine is running in the main loop, different functionalities can be chosen by using the push buttons on the board.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/rf2usb/rf2usb2.png&quot; alt=&quot;RF2USB&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/rf2usb/rf2usb1.png&quot; alt=&quot;RF2USB&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The project status is tracked on &lt;a href=&quot;https://github.com/RemiFM/RF-to-USB/tree/main&quot;&gt;github.com/RemiFM/RF-to-USB&lt;/a&gt;. The next step will be manual assembly using solder paste and hot air. Hereafter, the firmware will be finalised and tested. Updates soon!&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/pcb/schematic-rf2usb.png&quot; alt=&quot;RF2USB&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Remi De Coster</name></author><category term="project" /><category term="STM32" /><category term="NRF24" /><category term="PCB" /><summary type="html">STM32L4-based RF-to-USB dongle using the wireless NRF24 2.4 GHz transceiver. The board includes a USB-A connector on one side and a female SMA antenna connector on the other. It is a 4-layer PCB created using KiCad measuring 50 mm x 20 mm.</summary></entry><entry><title type="html">Low-Cost Tethered Drone</title><link href="http://localhost:4000/low-cost-tethered-drone.html" rel="alternate" type="text/html" title="Low-Cost Tethered Drone" /><published>2025-01-31T00:00:00+01:00</published><updated>2025-01-31T00:00:00+01:00</updated><id>http://localhost:4000/low-cost-tethered-drone</id><content type="html" xml:base="http://localhost:4000/low-cost-tethered-drone.html">&lt;p&gt;Tethered drones are a good solution for applications requiring long-duration flight, consistent power delivery, and secure communication. Unlike traditional drones that rely on onboard batteries, tethered drones are connected to a ground station via a physical tether, enabling &lt;strong&gt;continuous operation while maintaining a secure and interference-resistant data link&lt;/strong&gt;. These systems are increasingly popular in security and surveillance applications, offering real-time aerial monitoring without the risk of signal interception or limited flight time.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
@@ -20,12 +38,15 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;In a recent project, I explored &lt;strong&gt;low-cost solutions&lt;/strong&gt; for tethered drones by looking into different electrical architectures. The goal was to determine the feasibility of drone systems that provide reliable power and communication while maintaining affordability and scalability for diverse use cases. In particular we compared both &lt;strong&gt;AC tether&lt;/strong&gt; systems and &lt;strong&gt;high voltage DC tether&lt;/strong&gt; systems, in both centralized and distributed power topologies. Communication signals were transmitted over the same lines used to deliver power, utilizing &lt;strong&gt;signal superposition&lt;/strong&gt; to combine both functionalities within a single tether.&lt;/p&gt;
+&lt;p&gt;In a recent project, I explored &lt;strong&gt;low-cost solutions&lt;/strong&gt; for tethered drones by looking into different electrical architectures. The goal was to determine the feasibility of drone systems that provide reliable power and communication while maintaining affordability and scalability for diverse use cases. In particular we compared both &lt;strong&gt;AC tether&lt;/strong&gt; systems and &lt;strong&gt;high voltage DC tether&lt;/strong&gt; systems, in both centralized and distributed power topologies. I created PCB modules for the different topologies. Communication signals were transmitted over the same lines used to deliver power, utilizing &lt;strong&gt;signal superposition&lt;/strong&gt; to combine both functionalities within a single tether.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/img/pcb/pcb-acdc-700W.png&quot; alt=&quot;kart&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/pcb/pcb-acdc-700W.png&quot; alt=&quot;PCB&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/pcb/pcb-vicor-bus-converter.jpg&quot; alt=&quot;PCB&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</content><author><name>Remi De Coster</name></author><category term="project" /><category term="drones" /><category term="power" /><summary type="html">Tethered drones are a good solution for applications requiring long-duration flight, consistent power delivery, and secure communication. Unlike traditional drones that rely on onboard batteries, tethered drones are connected to a ground station via a physical tether, enabling continuous operation while maintaining a secure and interference-resistant data link. These systems are increasingly popular in security and surveillance applications, offering real-time aerial monitoring without the risk of signal interception or limited flight time.</summary></entry><entry><title type="html">Diagnostic Tool For Farming Vehicles</title><link href="http://localhost:4000/diagnostic-tool-for-farming-vehicles.html" rel="alternate" type="text/html" title="Diagnostic Tool For Farming Vehicles" /><published>2024-11-04T00:00:00+01:00</published><updated>2024-11-04T00:00:00+01:00</updated><id>http://localhost:4000/diagnostic-tool-for-farming-vehicles</id><content type="html" xml:base="http://localhost:4000/diagnostic-tool-for-farming-vehicles.html">&lt;p&gt;Agricultural vehicles often face wire harness issues due to the harsh environments in which they operate. Factors such as water ingress, punctures, ruptures, or structural damage to cables can significantly impact their performance. During the design phase, vehicle engineers struggle to &lt;strong&gt;identify potential failure points or weak spots in the wire harness&lt;/strong&gt;. For maintenance technicians, locating broken wire segments or loose connections is a time-consuming task, often necessitating the replacement of the entire harness.&lt;/p&gt;
@@ -71,11 +92,7 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;The tool is available on &lt;a href=&quot;http://battery.flandersmake.be&quot;&gt;battery.flandersmake.be&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Remi De Coster</name></author><category term="test" /><summary type="html">Hybrid Battery Energy Storage Systems (HBESS) combine two distinct but complementary cell technologies in a single battery solution. For example, a battery cell technology with a high energy density like NMC could be combined with a battery cell technology with high power density like LTO. In this way, a sort of ‘composite’ battery storage can be created which has the benefits of both cell technologies used.</summary></entry><entry><title type="html">Drone Docking Station</title><link href="http://localhost:4000/drone-docking-station.html" rel="alternate" type="text/html" title="Drone Docking Station" /><published>2024-07-19T00:00:00+02:00</published><updated>2024-07-19T00:00:00+02:00</updated><id>http://localhost:4000/drone-docking-station</id><content type="html" xml:base="http://localhost:4000/drone-docking-station.html">&lt;p&gt;Content coming soon!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/projects/docking-station/docking-station1.gif&quot; alt=&quot;docking-station&quot; class=&quot;ioda&quot; /&gt;&lt;/p&gt;</content><author><name>Remi De Coster</name></author><category term="test" /><summary type="html">Content coming soon!</summary></entry><entry><title type="html">Power Station For Greenhouse</title><link href="http://localhost:4000/power-station-for-greenhouse.html" rel="alternate" type="text/html" title="Power Station For Greenhouse" /><published>2024-04-09T00:00:00+02:00</published><updated>2024-04-09T00:00:00+02:00</updated><id>http://localhost:4000/power-station-for-greenhouse</id><content type="html" xml:base="http://localhost:4000/power-station-for-greenhouse.html">&lt;p&gt;Autonomous drones hold significant potential in agricultural applications, such as flower counting, yield estimation, scarecrow functionality, and disease detection. To effectively leverage this technology, it is essential to have a reliable infrastructure for real-time data monitoring and communication. For research purposes, we have a greenhouse setup where new algorithms, hardware, and software can be tested and refined.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Remi De Coster</name></author><category term="test" /><summary type="html">Hybrid Battery Energy Storage Systems (HBESS) combine two distinct but complementary cell technologies in a single battery solution. For example, a battery cell technology with a high energy density like NMC could be combined with a battery cell technology with high power density like LTO. In this way, a sort of ‘composite’ battery storage can be created which has the benefits of both cell technologies used.</summary></entry><entry><title type="html">Power Station For Greenhouse</title><link href="http://localhost:4000/power-station-for-greenhouse.html" rel="alternate" type="text/html" title="Power Station For Greenhouse" /><published>2024-04-09T00:00:00+02:00</published><updated>2024-04-09T00:00:00+02:00</updated><id>http://localhost:4000/power-station-for-greenhouse</id><content type="html" xml:base="http://localhost:4000/power-station-for-greenhouse.html">&lt;p&gt;Autonomous drones hold significant potential in agricultural applications, such as flower counting, yield estimation, scarecrow functionality, and disease detection. To effectively leverage this technology, it is essential to have a reliable infrastructure for real-time data monitoring and communication. For research purposes, we have a greenhouse setup where new algorithms, hardware, and software can be tested and refined.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
@@ -118,22 +135,34 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/projects/fruit-orchards/fruit-orchards1.jpg&quot; alt=&quot;Harvester&quot; class=&quot;ioda&quot; /&gt;&lt;/p&gt;</content><author><name>Remi De Coster</name></author><category term="example" /><summary type="html">Content coming soon!</summary></entry><entry><title type="html">Resonant Switching Dcdc Converter</title><link href="http://localhost:4000/resonant-switching-dcdc-converter.html" rel="alternate" type="text/html" title="Resonant Switching Dcdc Converter" /><published>2022-06-01T00:00:00+02:00</published><updated>2022-06-01T00:00:00+02:00</updated><id>http://localhost:4000/resonant-switching-dcdc-converter</id><content type="html" xml:base="http://localhost:4000/resonant-switching-dcdc-converter.html">&lt;p&gt;My master thesis covered the topic of the design and validation of a resonant switching LLC DC/DC converter for the auxilariy systems of a solar car. These low-power (&amp;lt;25W) auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a wide range (difference of 80V) of input voltages due to the battery system connected to the input.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/projects/fruit-orchards/fruit-orchards1.jpg&quot; alt=&quot;Harvester&quot; class=&quot;ioda&quot; /&gt;&lt;/p&gt;</content><author><name>Remi De Coster</name></author><category term="example" /><summary type="html">Content coming soon!</summary></entry><entry><title type="html">Resonant Switching Dcdc Converter</title><link href="http://localhost:4000/resonant-switching-dcdc-converter.html" rel="alternate" type="text/html" title="Resonant Switching Dcdc Converter" /><published>2022-06-01T00:00:00+02:00</published><updated>2022-06-01T00:00:00+02:00</updated><id>http://localhost:4000/resonant-switching-dcdc-converter</id><content type="html" xml:base="http://localhost:4000/resonant-switching-dcdc-converter.html">&lt;p&gt;My master thesis covered the topic of the design and validation of a &lt;strong&gt;resonant switching LLC DC/DC&lt;/strong&gt; converter for the auxilariy systems of a solar car. These &lt;strong&gt;low-power (&amp;lt;25W)&lt;/strong&gt; auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a &lt;strong&gt;wide range (~90V - 170V)&lt;/strong&gt; of input voltages due to the battery system connected to the input.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/img/pcb/pcb-llc-half-bridge.jpg&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/pcb/pcb-llc-half-bridge.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Both half-bridge and full-bridge rectification variants were created. The ICE2HS01G IC by Infineon was used. The final esults were underwhelming, the LLC converter was not deemed suitable for a low power application due to its complexity and large BOM.&lt;/p&gt;
+&lt;p&gt;Designing the resonant tank (LLC) of the converter is a crucial but difficult process. Using the first harmonic approximation method, a transfer function can be constructed which prescribes the behaviour of the converter at different switching frequencies. Another difficulty was the realisation of our own magnetic components. Multiple transformer configurations were constructed and compared.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/img/pcb/pcb-llc-full-bridge.jpg&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/thesis_llc/transferfunctie_finaal.png&quot; alt=&quot;llc&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/thesis_llc/wikkelmethoden_foto.jpg&quot; alt=&quot;llc&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Remi De Coster</name></author><category term="test" /><summary type="html">My master thesis covered the topic of the design and validation of a resonant switching LLC DC/DC converter for the auxilariy systems of a solar car. These low-power (&amp;lt;25W) auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a wide range (difference of 80V) of input voltages due to the battery system connected to the input.</summary></entry></feed>
+&lt;/table&gt;
+
+&lt;p&gt;Both half-bridge and full-bridge rectification variants were created using &lt;strong&gt;Altium Designer&lt;/strong&gt;. The ICE2HS01G IC by Infineon was used. The final esults were underwhelming, the LLC converter was not deemed suitable for a low power application due to its complexity and large BOM.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/thesis_llc/pcb_bovenzijde-1.png&quot; alt=&quot;llc&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/thesis_llc/pcb_onderzijde-1.png&quot; alt=&quot;llc&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Remi De Coster</name></author><category term="test" /><summary type="html">My master thesis covered the topic of the design and validation of a resonant switching LLC DC/DC converter for the auxilariy systems of a solar car. These low-power (&amp;lt;25W) auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a wide range (~90V - 170V) of input voltages due to the battery system connected to the input.</summary></entry></feed>

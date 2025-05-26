@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>STM32 based RF-to-USB dongle</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="STM32 based RF-to-USB dongle" />
+<meta name="author" content="Remi De Coster" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="STM32L4-based RF-to-USB dongle using the wireless NRF24 2.4 GHz transceiver. The board includes a USB-A connector on one side and a female SMA antenna connector on the other. It is a 4-layer PCB created using KiCad measuring 50 mm x 20 mm." />
+<meta property="og:description" content="STM32L4-based RF-to-USB dongle using the wireless NRF24 2.4 GHz transceiver. The board includes a USB-A connector on one side and a female SMA antenna connector on the other. It is a 4-layer PCB created using KiCad measuring 50 mm x 20 mm." />
+<link rel="canonical" href="http://localhost:4000/stm32-based-rf-to-usb-dongle.html" />
+<meta property="og:url" content="http://localhost:4000/stm32-based-rf-to-usb-dongle.html" />
+<meta property="og:site_name" content="Remi De Coster" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-04T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="STM32 based RF-to-USB dongle" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/stm32-based-rf-to-usb-dongle.html","author":{"@type":"Person","name":"Remi De Coster"},"@type":"BlogPosting","dateModified":"2025-04-04T00:00:00+02:00","datePublished":"2025-04-04T00:00:00+02:00","description":"STM32L4-based RF-to-USB dongle using the wireless NRF24 2.4 GHz transceiver. The board includes a USB-A connector on one side and a female SMA antenna connector on the other. It is a 4-layer PCB created using KiCad measuring 50 mm x 20 mm.","headline":"STM32 based RF-to-USB dongle","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/stm32-based-rf-to-usb-dongle.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Remi De Coster" /><link rel="shortcut icon" type="image/x-icon" href="/logo.png" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head><body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-04 00:00:00 +0200">2025-04-04</time>
+  </p>
+  
+  <h1>STM32 based RF-to-USB dongle</h1>
+
+  <p>STM32L4-based RF-to-USB dongle using the wireless <strong>NRF24</strong> 2.4 GHz transceiver. The board includes a USB-A connector on one side and a female SMA antenna connector on the other. It is a 4-layer PCB created using KiCad measuring <strong>50 mm x 20 mm</strong>.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/assets/img/pcb/pcb-rf2usb.png" alt="RF2USB" class="ioda" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The boards were ordered from JLCPCB, and the assembly was done <strong>manually</strong> using a hot plate and a rework station. I used STM32CubeIDE and the HAL provided by the manufacturer for writing the firmware. For the OLED display, I found a <a href="https://github.com/afiskon/stm32-ssd1306">library</a> which works with OLEDs based on SSD1306 driver. The nRF24 driver required more work, and is being constructed step by step. A state machine is running in the main loop, different functionalities can be chosen by using the push buttons on the board.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/assets/img/projects/rf2usb/rf2usb2.png" alt="RF2USB" /></td>
+      <td><img src="/assets/img/projects/rf2usb/rf2usb1.png" alt="RF2USB" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The project status is tracked on <a href="https://github.com/RemiFM/RF-to-USB/tree/main">github.com/RemiFM/RF-to-USB</a>. The next step will be manual assembly using solder paste and hot air. Hereafter, the firmware will be finalised and tested. Updates soon!</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/assets/img/pcb/schematic-rf2usb.png" alt="RF2USB" class="ioda" /></td>
+    </tr>
+  </tbody>
+</table>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>
