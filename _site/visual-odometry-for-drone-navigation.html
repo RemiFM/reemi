@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Visual Odometry for Drone Navigation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Visual Odometry for Drone Navigation" />
+<meta name="author" content="Remi De Coster" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hackathon This weekend I participated in the Battlefield of Things Hackathon - Drone Edition. An event organised by the Belgian Defence for defence personnel, industry experts, drone enthusiasts, researchers and students. The event is a unique opportunity to work on drone hardware and software and tackle real-world challenges proposed by Belgian Defence." />
+<meta property="og:description" content="Hackathon This weekend I participated in the Battlefield of Things Hackathon - Drone Edition. An event organised by the Belgian Defence for defence personnel, industry experts, drone enthusiasts, researchers and students. The event is a unique opportunity to work on drone hardware and software and tackle real-world challenges proposed by Belgian Defence." />
+<link rel="canonical" href="http://localhost:4000/visual-odometry-for-drone-navigation.html" />
+<meta property="og:url" content="http://localhost:4000/visual-odometry-for-drone-navigation.html" />
+<meta property="og:site_name" content="Remi De Coster" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-01T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Visual Odometry for Drone Navigation" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Remi De Coster"},"url":"http://localhost:4000/visual-odometry-for-drone-navigation.html","@type":"BlogPosting","headline":"Visual Odometry for Drone Navigation","dateModified":"2025-06-01T00:00:00+02:00","datePublished":"2025-06-01T00:00:00+02:00","description":"Hackathon This weekend I participated in the Battlefield of Things Hackathon - Drone Edition. An event organised by the Belgian Defence for defence personnel, industry experts, drone enthusiasts, researchers and students. The event is a unique opportunity to work on drone hardware and software and tackle real-world challenges proposed by Belgian Defence.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/visual-odometry-for-drone-navigation.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Remi De Coster" /><link rel="shortcut icon" type="image/x-icon" href="/logo.png" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head><body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-01 00:00:00 +0200">2025-06-01</time>
+  </p>
+  
+  <h1>Visual Odometry for Drone Navigation</h1>
+
+  <h2 id="hackathon">Hackathon</h2>
+<p>This weekend I participated in the <strong>Battlefield of Things Hackathon - Drone Edition</strong>. An event organised by the Belgian Defence for defence personnel, industry experts, drone enthusiasts, researchers and students. The event is a unique opportunity to work on drone hardware and software and tackle real-world challenges proposed by Belgian Defence.</p>
+
+<p>One of the presented challenges was drone navigation in <strong>GNSS- and RF- denied</strong> regions, necessary due to advancements in jamming technologies. This made me think of the American <a href="https://www.theseus.us/">Theseus Drone</a> which inspired me to approach the challenge in a similar way.</p>
+
+<h2 id="approach">Approach</h2>
+<p>Following methods could be used or combined to measure relative movement of the UAV:</p>
+<ul>
+  <li><strong>IMU</strong> - Accelerometer + Gyroscope + Magnetometer</li>
+  <li><strong>Optical Flow</strong> - A downwards facing camera tracks features, and calculates how the pixels are moved between frames. When the orientation and height above the surface is known, the absolure displacement can be calculated.</li>
+  <li><strong>Stereo camera</strong> - Using two downward facing camera’s, accurate depth measurements and 3D perception can be created.</li>
+  <li><strong>Sattelite imagery</strong> - Sattelite images could be stored in the drone, and be compared to the video stream of the downward camera. This way, sensor drift from the methods above could be reduced.</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/assets/img/projects/hackathon2/visual_odometry.png" alt="orangepi" class="ioda" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="result">Result</h2>
+<p>I was not going to be able to tackle all this in just 24 hours, but I brought some hardware and started working. I used an Orange Pi 5 Plus SBC which has a Rockchip CPU and a 6Tops NPU. I also brought and implemented a OV13850 13MP camera module and a LSM9DS0 iMU module.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/assets/img/projects/hackathon2/visual_odometry.gif" alt="odometry" class="ioda" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>I build a Flask webpage running on the SBC, and used OpenCV to recognize features in an image and track their relative movement between frames. From the GIF above it is clear that this tracking did not seem to work very well, and required more tuning (number of tracking points, feature treshold..) to improve it. Another difficulty was the depth/height estimation, as I did not have sensors for this, thus a constant height was assumed, not very accurate.</p>
+
+<p>I had good fun creating this, even though the position estimation is far from reality. I might try to improve it at home, running more advanced SLAM algorithms which I hope do a better job than my own attempted 2D visual odometry.</p>
+
+<p>More soon…maybe</p>
+
+</article>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,18 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-26T23:24:10+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Remi De Coster</title><subtitle>Electrical Engineer
-</subtitle><author><name>Remi De Coster</name></author><entry><title type="html">ESC for Motor Control Evaluation</title><link href="http://localhost:4000/esc-motor-controller.html" rel="alternate" type="text/html" title="ESC for Motor Control Evaluation" /><published>2025-05-12T00:00:00+02:00</published><updated>2025-05-12T00:00:00+02:00</updated><id>http://localhost:4000/esc-motor-controller</id><content type="html" xml:base="http://localhost:4000/esc-motor-controller.html">&lt;p&gt;This page will be used to track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various motor control algorithms like 6-step control and &lt;strong&gt;sensorless FOC&lt;/strong&gt; (field-oriented control). I defined the following requirements:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-02T22:47:09+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Remi De Coster</title><subtitle>Electrical Engineer
+</subtitle><author><name>Remi De Coster</name></author><entry><title type="html">Visual Odometry for Drone Navigation</title><link href="http://localhost:4000/visual-odometry-for-drone-navigation.html" rel="alternate" type="text/html" title="Visual Odometry for Drone Navigation" /><published>2025-06-01T00:00:00+02:00</published><updated>2025-06-01T00:00:00+02:00</updated><id>http://localhost:4000/visual-odometry-for-drone-navigation</id><content type="html" xml:base="http://localhost:4000/visual-odometry-for-drone-navigation.html">&lt;h2 id=&quot;hackathon&quot;&gt;Hackathon&lt;/h2&gt;
+&lt;p&gt;This weekend I participated in the &lt;strong&gt;Battlefield of Things Hackathon - Drone Edition&lt;/strong&gt;. An event organised by the Belgian Defence for defence personnel, industry experts, drone enthusiasts, researchers and students. The event is a unique opportunity to work on drone hardware and software and tackle real-world challenges proposed by Belgian Defence.&lt;/p&gt;
+
+&lt;p&gt;One of the presented challenges was drone navigation in &lt;strong&gt;GNSS- and RF- denied&lt;/strong&gt; regions, necessary due to advancements in jamming technologies. This made me think of the American &lt;a href=&quot;https://www.theseus.us/&quot;&gt;Theseus Drone&lt;/a&gt; which inspired me to approach the challenge in a similar way.&lt;/p&gt;
+
+&lt;h2 id=&quot;approach&quot;&gt;Approach&lt;/h2&gt;
+&lt;p&gt;Following methods could be used or combined to measure relative movement of the UAV:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;IMU&lt;/strong&gt; - Accelerometer + Gyroscope + Magnetometer&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Optical Flow&lt;/strong&gt; - A downwards facing camera tracks features, and calculates how the pixels are moved between frames. When the orientation and height above the surface is known, the absolure displacement can be calculated.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Stereo camera&lt;/strong&gt; - Using two downward facing camera’s, accurate depth measurements and 3D perception can be created.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sattelite imagery&lt;/strong&gt; - Sattelite images could be stored in the drone, and be compared to the video stream of the downward camera. This way, sensor drift from the methods above could be reduced.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/hackathon2/visual_odometry.png&quot; alt=&quot;orangepi&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;result&quot;&gt;Result&lt;/h2&gt;
+&lt;p&gt;I was not going to be able to tackle all this in just 24 hours, but I brought some hardware and started working. I used an Orange Pi 5 Plus SBC which has a Rockchip CPU and a 6Tops NPU. I also brought and implemented a OV13850 13MP camera module and a LSM9DS0 iMU module.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/hackathon2/visual_odometry.gif&quot; alt=&quot;odometry&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;I build a Flask webpage running on the SBC, and used OpenCV to recognize features in an image and track their relative movement between frames. From the GIF above it is clear that this tracking did not seem to work very well, and required more tuning (number of tracking points, feature treshold..) to improve it. Another difficulty was the depth/height estimation, as I did not have sensors for this, thus a constant height was assumed, not very accurate.&lt;/p&gt;
+
+&lt;p&gt;I had good fun creating this, even though the position estimation is far from reality. I might try to improve it at home, running more advanced SLAM algorithms which I hope do a better job than my own attempted 2D visual odometry.&lt;/p&gt;
+
+&lt;p&gt;More soon…maybe&lt;/p&gt;</content><author><name>Remi De Coster</name></author><category term="project" /><category term="AI" /><category term="Drone" /><summary type="html">Hackathon This weekend I participated in the Battlefield of Things Hackathon - Drone Edition. An event organised by the Belgian Defence for defence personnel, industry experts, drone enthusiasts, researchers and students. The event is a unique opportunity to work on drone hardware and software and tackle real-world challenges proposed by Belgian Defence.</summary></entry><entry><title type="html">ESC for Motor Control Evaluation</title><link href="http://localhost:4000/esc-motor-controller.html" rel="alternate" type="text/html" title="ESC for Motor Control Evaluation" /><published>2025-05-12T00:00:00+02:00</published><updated>2025-05-12T00:00:00+02:00</updated><id>http://localhost:4000/esc-motor-controller</id><content type="html" xml:base="http://localhost:4000/esc-motor-controller.html">&lt;p&gt;This page will be used to track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various motor control algorithms like 6-step control and &lt;strong&gt;sensorless FOC&lt;/strong&gt; (field-oriented control). I defined the following requirements:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;3-5S LiPo input (11.1-21V)&lt;/li&gt;
-  &lt;li&gt;45A continuous current&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;3-5S&lt;/strong&gt; LiPo input (11.1-21V)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;45A&lt;/strong&gt; continuous current&lt;/li&gt;
   &lt;li&gt;Current &amp;amp; voltage sensing on all phases&lt;/li&gt;
   &lt;li&gt;CAN, UART, SWD &amp;amp; I2C interfaces&lt;/li&gt;
   &lt;li&gt;6-layer board, 2oz on outer layers, 0.5oz on inner layers&lt;/li&gt;
-  &lt;li&gt;Small form factor, suitable for UAV applications&lt;/li&gt;
+  &lt;li&gt;Small form factor&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot; role=&quot;doc-noteref&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, suitable for UAV applications&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Some interesting resources I will consult during the design are the open source VESC project and the STMicroelectronics B-G431B-ESC1 discovery kit. Both have detailed schematics and documentation available.&lt;/p&gt;
 
-&lt;p&gt;The schematic is based around the STM32G4 microcontroller, mixed-signal MCU’s with DSP and FPU instructions aimed at motor control and digital power applications. Three single half-bridge drivers are used instead of a single three-phase driver to benefit the layout of the board. The STL225N6F7AG 60V, 120A MOSFET with an on-resistance of 1.2mOhm is used.&lt;/p&gt;
+&lt;p&gt;The schematic is based around the &lt;strong&gt;STM32G4&lt;/strong&gt; microcontroller, mixed-signal MCU’s with DSP and FPU instructions aimed at motor control and digital power applications. Three single half-bridge drivers are used instead of a single three-phase driver to benefit the layout of the board. The STL225N6F7AG &lt;strong&gt;60V, 120A MOSFET&lt;/strong&gt; with an on-resistance of 1.2mOhm is used.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
@@ -22,7 +59,13 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Currently, I am in progress with the layout of the board. Only the power stage is shown in the schematic above.&lt;/p&gt;</content><author><name>Remi De Coster</name></author><category term="project" /><category term="STM32" /><category term="ESC" /><category term="PCB" /><summary type="html">This page will be used to track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various motor control algorithms like 6-step control and sensorless FOC (field-oriented control). I defined the following requirements:</summary></entry><entry><title type="html">STM32 based RF-to-USB dongle</title><link href="http://localhost:4000/stm32-based-rf-to-usb-dongle.html" rel="alternate" type="text/html" title="STM32 based RF-to-USB dongle" /><published>2025-04-04T00:00:00+02:00</published><updated>2025-04-04T00:00:00+02:00</updated><id>http://localhost:4000/STM32-based-RF-to-USB-dongle</id><content type="html" xml:base="http://localhost:4000/stm32-based-rf-to-usb-dongle.html">&lt;p&gt;STM32L4-based RF-to-USB dongle using the wireless &lt;strong&gt;NRF24&lt;/strong&gt; 2.4 GHz transceiver. The board includes a USB-A connector on one side and a female SMA antenna connector on the other. It is a 4-layer PCB created using KiCad measuring &lt;strong&gt;50 mm x 20 mm&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;I ran into a dilemma. Initially I wanted to have small SMT components on both sides of the final PCB assembly. But since I will be the one assembling the board, this might not be the best idea. I have decided the majority of components will come on a single side of the board making the result a bit larger than initially expected. This choice will help me keep my sanity during assembly and troubleshooting. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Remi De Coster</name></author><category term="project" /><category term="STM32" /><category term="ESC" /><category term="PCB" /><summary type="html">This page will be used to track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various motor control algorithms like 6-step control and sensorless FOC (field-oriented control). I defined the following requirements:</summary></entry><entry><title type="html">STM32 based RF-to-USB dongle</title><link href="http://localhost:4000/stm32-based-rf-to-usb-dongle.html" rel="alternate" type="text/html" title="STM32 based RF-to-USB dongle" /><published>2025-04-04T00:00:00+02:00</published><updated>2025-04-04T00:00:00+02:00</updated><id>http://localhost:4000/STM32-based-RF-to-USB-dongle</id><content type="html" xml:base="http://localhost:4000/stm32-based-rf-to-usb-dongle.html">&lt;p&gt;STM32L4-based RF-to-USB dongle using the wireless &lt;strong&gt;NRF24&lt;/strong&gt; 2.4 GHz transceiver. The board includes a USB-A connector on one side and a female SMA antenna connector on the other. It is a 4-layer PCB created using KiCad measuring &lt;strong&gt;50 mm x 20 mm&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
@@ -158,34 +201,4 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/projects/fruit-orchards/fruit-orchards1.jpg&quot; alt=&quot;Harvester&quot; class=&quot;ioda&quot; /&gt;&lt;/p&gt;</content><author><name>Remi De Coster</name></author><category term="example" /><summary type="html">Content coming soon!</summary></entry><entry><title type="html">Resonant Switching Dcdc Converter</title><link href="http://localhost:4000/resonant-switching-dcdc-converter.html" rel="alternate" type="text/html" title="Resonant Switching Dcdc Converter" /><published>2022-06-01T00:00:00+02:00</published><updated>2022-06-01T00:00:00+02:00</updated><id>http://localhost:4000/resonant-switching-dcdc-converter</id><content type="html" xml:base="http://localhost:4000/resonant-switching-dcdc-converter.html">&lt;p&gt;My master thesis covered the topic of the design and validation of a &lt;strong&gt;resonant switching LLC DC/DC&lt;/strong&gt; converter for the auxilariy systems of a solar car. These &lt;strong&gt;low-power (&amp;lt;25W)&lt;/strong&gt; auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a &lt;strong&gt;wide range (~90V - 170V)&lt;/strong&gt; of input voltages due to the battery system connected to the input.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/img/pcb/pcb-llc-half-bridge.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Designing the resonant tank (LLC) of the converter is a crucial but difficult process. Using the first harmonic approximation method, a transfer function can be constructed which prescribes the behaviour of the converter at different switching frequencies. Another difficulty was the realisation of our own magnetic components. Multiple transformer configurations were constructed and compared.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/thesis_llc/transferfunctie_finaal.png&quot; alt=&quot;llc&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/thesis_llc/wikkelmethoden_foto.jpg&quot; alt=&quot;llc&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Both half-bridge and full-bridge rectification variants were created using &lt;strong&gt;Altium Designer&lt;/strong&gt;. The ICE2HS01G IC by Infineon was used. The final esults were underwhelming, the LLC converter was not deemed suitable for a low power application due to its complexity and large BOM.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/thesis_llc/pcb_bovenzijde-1.png&quot; alt=&quot;llc&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/thesis_llc/pcb_onderzijde-1.png&quot; alt=&quot;llc&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Remi De Coster</name></author><category term="test" /><summary type="html">My master thesis covered the topic of the design and validation of a resonant switching LLC DC/DC converter for the auxilariy systems of a solar car. These low-power (&amp;lt;25W) auxilary systems include the vehicle dashboard, communication modules, brake lights, horn, blinkers… The converter has to work for a wide range (~90V - 170V) of input voltages due to the battery system connected to the input.</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/img/projects/fruit-orchards/fruit-orchards1.jpg&quot; alt=&quot;Harvester&quot; class=&quot;ioda&quot; /&gt;&lt;/p&gt;</content><author><name>Remi De Coster</name></author><category term="example" /><summary type="html">Content coming soon!</summary></entry></feed>
