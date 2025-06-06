@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-02T22:47:09+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Remi De Coster</title><subtitle>Electrical Engineer
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-06T16:48:05+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Remi De Coster</title><subtitle>Electrical Engineer
 </subtitle><author><name>Remi De Coster</name></author><entry><title type="html">Visual Odometry for Drone Navigation</title><link href="http://localhost:4000/visual-odometry-for-drone-navigation.html" rel="alternate" type="text/html" title="Visual Odometry for Drone Navigation" /><published>2025-06-01T00:00:00+02:00</published><updated>2025-06-01T00:00:00+02:00</updated><id>http://localhost:4000/visual-odometry-for-drone-navigation</id><content type="html" xml:base="http://localhost:4000/visual-odometry-for-drone-navigation.html">&lt;h2 id=&quot;hackathon&quot;&gt;Hackathon&lt;/h2&gt;
 &lt;p&gt;This weekend I participated in the &lt;strong&gt;Battlefield of Things Hackathon - Drone Edition&lt;/strong&gt;. An event organised by the Belgian Defence for defence personnel, industry experts, drone enthusiasts, researchers and students. The event is a unique opportunity to work on drone hardware and software and tackle real-world challenges proposed by Belgian Defence.&lt;/p&gt;
 
@@ -36,36 +36,104 @@
 
 &lt;p&gt;I had good fun creating this, even though the position estimation is far from reality. I might try to improve it at home, running more advanced SLAM algorithms which I hope do a better job than my own attempted 2D visual odometry.&lt;/p&gt;
 
-&lt;p&gt;More soon…maybe&lt;/p&gt;</content><author><name>Remi De Coster</name></author><category term="project" /><category term="AI" /><category term="Drone" /><summary type="html">Hackathon This weekend I participated in the Battlefield of Things Hackathon - Drone Edition. An event organised by the Belgian Defence for defence personnel, industry experts, drone enthusiasts, researchers and students. The event is a unique opportunity to work on drone hardware and software and tackle real-world challenges proposed by Belgian Defence.</summary></entry><entry><title type="html">ESC for Motor Control Evaluation</title><link href="http://localhost:4000/esc-motor-controller.html" rel="alternate" type="text/html" title="ESC for Motor Control Evaluation" /><published>2025-05-12T00:00:00+02:00</published><updated>2025-05-12T00:00:00+02:00</updated><id>http://localhost:4000/esc-motor-controller</id><content type="html" xml:base="http://localhost:4000/esc-motor-controller.html">&lt;p&gt;This page will be used to track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various motor control algorithms like 6-step control and &lt;strong&gt;sensorless FOC&lt;/strong&gt; (field-oriented control). I defined the following requirements:&lt;/p&gt;
+&lt;p&gt;More soon…    maybe!&lt;/p&gt;</content><author><name>Remi De Coster</name></author><category term="project" /><category term="AI" /><category term="Drone" /><summary type="html">Hackathon This weekend I participated in the Battlefield of Things Hackathon - Drone Edition. An event organised by the Belgian Defence for defence personnel, industry experts, drone enthusiasts, researchers and students. The event is a unique opportunity to work on drone hardware and software and tackle real-world challenges proposed by Belgian Defence.</summary></entry><entry><title type="html">BLDC Motor Controller: Component Selection</title><link href="http://localhost:4000/bldc-motor-controller-component-selection.html" rel="alternate" type="text/html" title="BLDC Motor Controller: Component Selection" /><published>2025-05-12T00:00:00+02:00</published><updated>2025-05-12T00:00:00+02:00</updated><id>http://localhost:4000/bldc-motor-controller-component-selection</id><content type="html" xml:base="http://localhost:4000/bldc-motor-controller-component-selection.html">&lt;blockquote&gt;
+  &lt;p&gt;This article is &lt;strong&gt;part 1&lt;/strong&gt; of a series in which I will track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various (sensorless) motor control algorithms like &lt;strong&gt;6-step&lt;/strong&gt; control and &lt;strong&gt;FOC&lt;/strong&gt; (field-oriented control).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I defined the following requirements:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;3-5S&lt;/strong&gt; LiPo input (11.1-21V)&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;45A&lt;/strong&gt; continuous current&lt;/li&gt;
-  &lt;li&gt;Current &amp;amp; voltage sensing on all phases&lt;/li&gt;
-  &lt;li&gt;CAN, UART, SWD &amp;amp; I2C interfaces&lt;/li&gt;
+  &lt;li&gt;Current &amp;amp; voltage sensing on all phases + Back-EMF sensing&lt;/li&gt;
+  &lt;li&gt;CAN, USB, &amp;amp; hall sensor interfaces (+ maybe I2C/SPI/UART)&lt;/li&gt;
   &lt;li&gt;6-layer board, 2oz on outer layers, 0.5oz on inner layers&lt;/li&gt;
-  &lt;li&gt;Small form factor&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot; role=&quot;doc-noteref&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, suitable for UAV applications&lt;/li&gt;
+  &lt;li&gt;Minimal form factor, majority of components on top layer&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Some interesting resources I will consult during the design are the open source VESC project and the STMicroelectronics B-G431B-ESC1 discovery kit. Both have detailed schematics and documentation available.&lt;/p&gt;
+&lt;p&gt;Some interesting resources I found and will consult during the design are the &lt;a href=&quot;https://github.com/vedderb/bldc-hardware&quot;&gt;open source VESC project&lt;/a&gt; and the STMicroelectronics &lt;a href=&quot;https://www.st.com/en/evaluation-tools/b-g431b-esc1.html&quot;&gt;B-G431B-ESC1 discovery kit&lt;/a&gt;. Both have detailed schematics and documentation available.&lt;/p&gt;
 
-&lt;p&gt;The schematic is based around the &lt;strong&gt;STM32G4&lt;/strong&gt; microcontroller, mixed-signal MCU’s with DSP and FPU instructions aimed at motor control and digital power applications. Three single half-bridge drivers are used instead of a single three-phase driver to benefit the layout of the board. The STL225N6F7AG &lt;strong&gt;60V, 120A MOSFET&lt;/strong&gt; with an on-resistance of 1.2mOhm is used.&lt;/p&gt;
+&lt;h2 id=&quot;microcontroller&quot;&gt;Microcontroller&lt;/h2&gt;
+&lt;p&gt;For the brains of the ESC, I chose a microcontroller from the &lt;strong&gt;STM32G4&lt;/strong&gt; series by STMicroelectronics. These MCUs are designed with motor control and digital power applications in mind, offering a solid blend of performance and analog capability.&lt;/p&gt;
+
+&lt;p&gt;Specifically, I went with the &lt;strong&gt;STM32G431CB.&lt;/strong&gt;* It’s an entry-level chip that brings together a Cortex-M4 core with DSP and floating-point unit (FPU) support—handy for fast real-time calculations. One of the key reasons for this choice was its rich set of analog features: it includes three 12-bit ADCs and four programmable op-amps, which are perfect for precise current shunt measurements.&lt;/p&gt;
+
+&lt;h2 id=&quot;mosfets--gate-drivers&quot;&gt;MOSFETs &amp;amp; Gate Drivers&lt;/h2&gt;
+&lt;p&gt;When it came to selecting the power stage components, I focused on finding MOSFETs with high current handling, low on-resistance, and a comfortable voltage margin. Since the ESC is designed to operate at a maximum voltage of around 21V, I wanted components that could easily withstand voltage spikes and transients. I settled on the &lt;strong&gt;STL225N6F7AG&lt;/strong&gt;, a &lt;strong&gt;60V&lt;/strong&gt;, &lt;strong&gt;120A&lt;/strong&gt; MOSFET with a very low &lt;strong&gt;1.2 mΩ&lt;/strong&gt; R&lt;sub&gt;DS(on)&lt;/sub&gt;. These specs provide plenty of headroom while keeping conduction losses to a minimum.&lt;/p&gt;
+
+&lt;p&gt;For the gate drivers, I chose to use &lt;strong&gt;three individual half-bridge drivers&lt;/strong&gt; instead of a single integrated three-phase driver. This might seem unconventional, but it offers a significant layout advantage: it allows me to place each driver closer to its corresponding MOSFET pair, which gives a bit more flexibility in routing. I picked the &lt;strong&gt;L6388E&lt;/strong&gt; which is rated for 600V and has 400mA source current and 650mA sink current capabality.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/esc-motor/power_schematic.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/esc-motor/esc_half_bridge.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;I ran into a dilemma. Initially I wanted to have small SMT components on both sides of the final PCB assembly. But since I will be the one assembling the board, this might not be the best idea. I have decided the majority of components will come on a single side of the board making the result a bit larger than initially expected. This choice will help me keep my sanity during assembly and troubleshooting. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Remi De Coster</name></author><category term="project" /><category term="STM32" /><category term="ESC" /><category term="PCB" /><summary type="html">This page will be used to track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various motor control algorithms like 6-step control and sensorless FOC (field-oriented control). I defined the following requirements:</summary></entry><entry><title type="html">STM32 based RF-to-USB dongle</title><link href="http://localhost:4000/stm32-based-rf-to-usb-dongle.html" rel="alternate" type="text/html" title="STM32 based RF-to-USB dongle" /><published>2025-04-04T00:00:00+02:00</published><updated>2025-04-04T00:00:00+02:00</updated><id>http://localhost:4000/STM32-based-RF-to-USB-dongle</id><content type="html" xml:base="http://localhost:4000/stm32-based-rf-to-usb-dongle.html">&lt;p&gt;STM32L4-based RF-to-USB dongle using the wireless &lt;strong&gt;NRF24&lt;/strong&gt; 2.4 GHz transceiver. The board includes a USB-A connector on one side and a female SMA antenna connector on the other. It is a 4-layer PCB created using KiCad measuring &lt;strong&gt;50 mm x 20 mm&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;power-control&quot;&gt;Power Control&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;L7986&lt;/strong&gt;-based buck regulator will converter the input battery voltage to a stable 10V reference. The 10V is used directly by the gate drivers, and is reduced to 5V and 3.3V by &lt;strong&gt;LDFPVR&lt;/strong&gt; linear regulators.&lt;/p&gt;
+
+&lt;p&gt;There is also a USB-C 2.0 receptacle on the board which is able to communicate with the MUC &amp;amp; power the peripherals (5V &amp;amp; 3.3V) when no battery is connected. The &lt;strong&gt;TPS2116&lt;/strong&gt;, a low IQ power multiplexer is used to switch between USB power and battery power, prioritizing the battery power if available.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/esc-motor/esc_power_selector.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/esc-motor/esc_linear_regulator_5V.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/esc-motor/esc_buck_regulator_10V.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;sensing&quot;&gt;Sensing&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;current&lt;/strong&gt; is measured in each phase of the motor controller by using a low-side shunt resistor of 2mΩ in each half-bridge. Two current shunts would be sufficient (sum of phase currents equals 0), but this allows for higher accuracy. The internal op-amps of the MCU are used to amplify the measurement. The &lt;strong&gt;voltage&lt;/strong&gt; of each motor phase and the battery voltage is measured using a simple resistor divider.&lt;/p&gt;
+
+&lt;p&gt;Measuring the &lt;strong&gt;back-EMF&lt;/strong&gt; is interesting for sensorless control as it is directly related to the rotor’s position and speed, and can thus be used to determine the commutation sequence. In application notes, I found an interesting schematic which allows the back-EMF to be measured in two modes. Either at the end of PWM at low duty cycles (low speeds), or during the PWM at higher duty cycles (high speeds).&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/esc-motor/esc_back_emf_sense.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;can-interface&quot;&gt;CAN Interface&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;TCAN330&lt;/strong&gt; transceiver module is used to enable the CAN peripheral. A fuse is included to protect the connected bus if anything were to go wrong with the motor controller. The circuit accepts also the supply voltage from the external unit. A terminator reistor of 120Ω can be enabled or disabled by the MCU by integrating a digital SPDT switch.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/esc-motor/esc_can_interface.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;next-up&quot;&gt;Next up&lt;/h2&gt;
+&lt;p&gt;That’s it for the most important components on the board. The full schematics will be made available on GitHub soon.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/esc-motor/esc_schematic_1.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/esc-motor/esc_schematic_2.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/assets/img/projects/esc-motor/esc_schematic_3.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Time to start on the layout!
+&lt;img src=&quot;/assets/img/projects/esc-motor/esc_components.png&quot; alt=&quot;pcb&quot; class=&quot;ioda&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Remi De Coster</name></author><category term="project" /><category term="STM32" /><category term="ESC" /><category term="PCB" /><summary type="html">This article is part 1 of a series in which I will track my progress in the creation of a STM32-based ESC motor controller. The board will be designed to test various (sensorless) motor control algorithms like 6-step control and FOC (field-oriented control).</summary></entry><entry><title type="html">STM32 based RF-to-USB dongle</title><link href="http://localhost:4000/stm32-based-rf-to-usb-dongle.html" rel="alternate" type="text/html" title="STM32 based RF-to-USB dongle" /><published>2025-04-04T00:00:00+02:00</published><updated>2025-04-04T00:00:00+02:00</updated><id>http://localhost:4000/STM32-based-RF-to-USB-dongle</id><content type="html" xml:base="http://localhost:4000/stm32-based-rf-to-usb-dongle.html">&lt;p&gt;STM32L4-based RF-to-USB dongle using the wireless &lt;strong&gt;NRF24&lt;/strong&gt; 2.4 GHz transceiver. The board includes a USB-A connector on one side and a female SMA antenna connector on the other. It is a 4-layer PCB created using KiCad measuring &lt;strong&gt;50 mm x 20 mm&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;

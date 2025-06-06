@@ -29,4 +29,4 @@ I build a Flask webpage running on the SBC, and used OpenCV to recognize feature
 
 I had good fun creating this, even though the position estimation is far from reality. I might try to improve it at home, running more advanced SLAM algorithms which I hope do a better job than my own attempted 2D visual odometry.
 
-More soon...maybe
+More soon...    maybe!
